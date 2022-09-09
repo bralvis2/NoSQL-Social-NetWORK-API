@@ -1,0 +1,23 @@
+{
+  "name": "nosql-social-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bralvis2/NoSQL-Social-NetWORK-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bralvis2/NoSQL-Social-NetWORK-API/issues"
+  },
+  "homepage": "https://github.com/bralvis2/NoSQL-Social-NetWORK-API#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
