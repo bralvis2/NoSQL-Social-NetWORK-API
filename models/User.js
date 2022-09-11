@@ -20,5 +20,37 @@ const userSchema = new Schema(
             },
             required: [true, "Email required"]
         },
+
+        thoughts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought',
+            },
+        ],
+
+        friends: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: true,
+
     }
-)
+);
+
+userSchema
+.virtual('friendCount')
+// Getter Method
+.get(function (){
+    return this.friends.length;
+});
+
+const User = model('User', userSchema);
+
+module.exports = User;
