@@ -9,7 +9,7 @@ module.exports = {
     },
 
     // Aggregate function to get a single user
-    getUserId(req, res) {
+    getSingleUser(req, res) {
         User.findOne({_id: req.params.userId})
         .select('-__v')
         .then((user) => 
