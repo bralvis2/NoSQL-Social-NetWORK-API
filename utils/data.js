@@ -31,7 +31,7 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // Gets a random name
 const getRandomName = () =>
-    `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
+    `${getRandomArrItem(names)}`;
 
 // Function to generate random thoughts that we can add to thought object.
 const getRandomThoughts = (int) => {
@@ -39,7 +39,7 @@ const getRandomThoughts = (int) => {
     for (let i = 0; i < int; i++) {
         results.push({
             thoughtText: getRandomArrItem(appDescriptions),
-            username: getRandomName().split(' ')[0],
+            username: getRandomName(names),
         });
     }
     return results;

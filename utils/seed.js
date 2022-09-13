@@ -16,11 +16,11 @@ connection.once('open', async () => {
   // Create empty array to hold the thoughts
   const thoughts = [];
 
-  // Loop 5 times -- add thoughts to the thoughts array
-  for (let i = 0; i < 5; i++) {
+  // Loop 3 times -- add thoughts to the thoughts array
+  for (let i = 0; i < 3; i++) {
     // Get some random thought objects using a helper function that we imported from ./data
     const reaction = getRandomReactions();
-    const thought = getRandomThoughts(5);
+    const thought = getRandomThoughts(3);
     const username = getRandomName();
 
 
