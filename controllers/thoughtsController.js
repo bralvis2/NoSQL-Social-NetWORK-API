@@ -37,8 +37,8 @@ updateThought(req, res) {
       { $set: req.body },
       { runValidators: true, new: true }
     )
-      .then((User) =>
-        !User
+      .then((user) =>
+        !user
           ? res.status(404).json({ message: 'No user was found with this id!' })
           : res.json(user)
       )
